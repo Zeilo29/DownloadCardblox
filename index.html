@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download CardBlox</title>
+
+    <!-- Logo de l'onglet -->
+    <link rel="icon" type="image/jpeg" href="pc2J1.jpg">
+
+    <title>CardBlox</title>
 
     <!-- Logos -->
     <link rel="stylesheet"
@@ -24,10 +28,7 @@
             flex-direction: column;
         }
 
-        /* =========================
-           BARRE DU HAUT
-        ========================= */
-
+        /* BARRE DU HAUT */
         .top-bar {
             width: 100%;
             height: 70px;
@@ -61,10 +62,7 @@
             }
         }
 
-        /* =========================
-           CONTENU
-        ========================= */
-
+        /* CONTENU */
         .content {
             flex: 1;
             text-align: center;
@@ -77,25 +75,21 @@
             margin-bottom: 45px;
         }
 
-        /* =========================
-           BOUTONS
-        ========================= */
-
+        /* LOGOS */
         .platforms {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 45px;
         }
 
         .platform-button {
-            width: 170px;
+            width: 100px;
             height: 100px;
 
             background-color: #242424;
             border: 1px solid #383838;
-            border-radius: 12px;
+            border-radius: 15px;
 
             color: white;
             text-decoration: none;
@@ -103,16 +97,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
-
-            font-size: 18px;
-            font-weight: bold;
 
             transition: 0.2s;
         }
 
         .platform-button i {
-            font-size: 35px;
+            font-size: 50px;
         }
 
         .platform-button:hover {
@@ -121,10 +111,14 @@
             transform: translateY(-5px);
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* TEXTE SOUS LES LOGOS */
+        .platform-info {
+            margin-top: 25px;
+            color: white;
+            font-size: 17px;
+        }
 
+        /* FOOTER */
         .footer {
             width: 100%;
             padding: 15px 20px;
@@ -147,6 +141,32 @@
         .footer a:hover {
             color: white;
             text-decoration: underline;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+            .platforms {
+                gap: 15px;
+            }
+
+            .platform-button {
+                width: 80px;
+                height: 80px;
+            }
+
+            .platform-button i {
+                font-size: 40px;
+            }
+
+            .welcome {
+                font-size: 22px;
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -187,39 +207,28 @@
             Hello ! welcome to CardBlox, it's a multiplatform
         </div>
 
-        <!-- BOUTONS PLATEFORMES -->
+        <!-- LOGOS DES PLATEFORMES -->
         <div class="platforms">
 
             <!-- WINDOWS -->
             <a class="platform-button" href="#">
                 <i class="fa-brands fa-windows"></i>
-                <span>PC</span>
             </a>
 
             <!-- MACBOOK -->
             <a class="platform-button" href="#">
                 <i class="fa-brands fa-apple"></i>
-                <span>MacBook</span>
-            </a>
-
-            <!-- ANDROID -->
-            <a class="platform-button" href="#">
-                <i class="fa-brands fa-android"></i>
-                <span>Android</span>
             </a>
 
             <!-- LINUX -->
             <a class="platform-button" href="#">
                 <i class="fa-brands fa-linux"></i>
-                <span>Linux</span>
             </a>
 
-            <!-- IPHONE -->
-            <a class="platform-button" href="#">
-                <i class="fa-brands fa-apple"></i>
-                <span>iPhone</span>
-            </a>
+        </div>
 
+        <div class="platform-info">
+            only for PC, Mobile on PlayStore, AppStore
         </div>
 
     </main>
@@ -227,10 +236,11 @@
     <!-- FOOTER -->
     <footer class="footer">
         <span>Website made in GitHub</span>
+
         <span>CardBlox made in GDevelop5</span>
 
         <a href="https://discord.gg/bsVQYbwTT" target="_blank">
-            Got any problem ? join the Discord ! click here
+            Got any problem ? join the Discord !
         </a>
     </footer>
 
