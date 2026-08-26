@@ -3,38 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARDBLOX</title>
+    <title>CardBlox</title>
+
+    <!-- Logos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
+            min-height: 100vh;
             background-color: #181818;
             font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
         }
+
+        /* =========================
+           BARRE DU HAUT
+        ========================= */
 
         .top-bar {
             width: 100%;
             height: 70px;
             background-color: #101010;
+            overflow: hidden;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            flex-shrink: 0;
         }
 
-        .logo {
+        .scroll {
+            display: flex;
+            white-space: nowrap;
+            animation: defilement 10s linear infinite;
+        }
+
+        .scroll span {
             color: white;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
-            margin-right: 20px;
+            margin-right: 50px;
+        }
+
+        @keyframes defilement {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* =========================
+           CONTENU
+        ========================= */
+
+        .content {
+            flex: 1;
+            text-align: center;
+            padding-top: 35px;
+        }
+
+        .welcome {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 45px;
+        }
+
+        /* =========================
+           BOUTONS
+        ========================= */
+
+        .platforms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-button {
+            width: 170px;
+            height: 100px;
+
+            background-color: #242424;
+            border: 1px solid #383838;
+            border-radius: 12px;
+
+            color: white;
+            text-decoration: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .platform-button i {
+            font-size: 35px;
+        }
+
+        .platform-button:hover {
+            background-color: #303030;
+            border-color: #666;
+            transform: translateY(-5px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            width: 100%;
+            padding: 15px 20px;
+
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+
+            color: #777;
+            font-size: 14px;
+
+            background-color: #121212;
+        }
+
+        .footer a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- BARRE CARDBLOX -->
     <div class="top-bar">
-        <div class="logo">CARDBLOX</div>
+        <div class="scroll">
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+            <span>CARDBLOX</span>
+        </div>
     </div>
+
+    <!-- CONTENU -->
+    <main class="content">
+
+        <div class="welcome">
+            Hello ! welcome to CardBlox, it's a multiplatform
+        </div>
+
+        <!-- BOUTONS PLATEFORMES -->
+        <div class="platforms">
+
+            <!-- WINDOWS -->
+            <a class="platform-button" href="#">
+                <i class="fa-brands fa-windows"></i>
+                <span>PC</span>
+            </a>
+
+            <!-- MACBOOK -->
+            <a class="platform-button" href="#">
+                <i class="fa-brands fa-apple"></i>
+                <span>MacBook</span>
+            </a>
+
+            <!-- ANDROID -->
+            <a class="platform-button" href="#">
+                <i class="fa-brands fa-android"></i>
+                <span>Android</span>
+            </a>
+
+            <!-- LINUX -->
+            <a class="platform-button" href="#">
+                <i class="fa-brands fa-linux"></i>
+                <span>Linux</span>
+            </a>
+
+            <!-- IPHONE -->
+            <a class="platform-button" href="#">
+                <i class="fa-brands fa-apple"></i>
+                <span>iPhone</span>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <span>Website made in GitHub</span>
+        <span>CardBlox made in GDevelop5</span>
+
+        <a href="https://discord.gg/bsVQYbwTT" target="_blank">
+            Got any problem ? join the Discord !
+        </a>
+    </footer>
 
 </body>
 </html>
